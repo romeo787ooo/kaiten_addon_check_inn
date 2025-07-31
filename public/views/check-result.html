@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://files.kaiten.ru/web-sdk/v1.min.js"></script>
+  <link href="https://files.kaiten.ru/web-sdk/v1.min.css" rel="stylesheet" />
+  <link href="/public/css/main.css" rel="stylesheet" />
+  <title>Результаты проверки ИНН</title>
+</head>
+<body>
+  <div id="checkResultContainer" class="addon-container" style="display: none;">
+    <div class="check-date-info">
+      Дата проверки: <span id="checkDateValue"></span>
+    </div>
+    
+    <div class="company-info-block">
+      <span class="info-label">Наименование организации:</span>
+      <div id="companyTitleResult" class="company-title"></div>
+      
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-label">ИНН</div>
+          <div id="innResultValue" class="info-value"></div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">КПП</div>
+          <div id="kppResultValue" class="info-value"></div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">ОГРН</div>
+          <div id="ogrnResultValue" class="info-value"></div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Статус</div>
+          <div id="statusResultValue" class="info-value"></div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">ОКПО</div>
+          <div id="okpoResultValue" class="info-value"></div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">ОКВЭД</div>
+          <div id="okvedResultValue" class="info-value"></div>
+        </div>
+      </div>
+
+      <div class="address-block">
+        <div class="info-label">Адрес</div>
+        <div id="addressResultValue" class="info-value"></div>
+      </div>
+
+      <div class="management-block">
+        <div class="info-label">Руководитель</div>
+        <div id="managementFIOResultValue" class="info-value"></div>
+        <div id="managementPostResultValue" class="management-post"></div>
+      </div>
+    </div>
+
+    <div id="registryCheckSummary" class="registry-check-summary" style="display: none;">
+      <!-- Content filled by JavaScript -->
+    </div>
+  </div>
+  <div id="loadingMessage" style="padding: 16px; text-align: center; color: var(--addon-text-secondary-color);">
+    Загрузка результатов проверки...
+  </div>
+  <script src="/public/js/check-result.js"></script>
+</body>
+</html>
