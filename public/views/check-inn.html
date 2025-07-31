@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <script src="https://files.kaiten.ru/web-sdk/v1.min.js"></script>
+ <link href="https://files.kaiten.ru/web-sdk/v1.min.css" rel="stylesheet" />
+ <link href="/public/css/main.css" rel="stylesheet" />
+ <title>Проверка ИНН</title>
+</head>
+<body>
+ <div id="checkInnContent" class="addon-container">
+   <label for="innInput" class="addon-input-label">Введите ИНН компании</label>
+   <input type="text" id="innInput" class="addon-input" 
+          placeholder="Например: 7710878000" maxlength="12">
+   
+   <div id="loader" class="loader">
+     <div class="loader-spinner"></div>
+     <div class="loader-text">Выполняется проверка ИНН...</div>
+   </div>
+
+   <!-- Секция с результатами проверки -->
+   <div id="resultsSection" class="results-section">
+     <div class="company-info-block">
+       <span class="info-label">Наименование организации:</span>
+       <div id="companyTitle" class="company-title"></div>
+       
+       <div class="info-grid">
+         <div class="info-item">
+           <div class="info-label">ИНН</div>
+           <div id="innValue" class="info-value"></div>
+         </div>
+         <div class="info-item">
+           <div class="info-label">КПП</div>
+           <div id="kppValue" class="info-value"></div>
+         </div>
+         <div class="info-item">
+           <div class="info-label">ОГРН</div>
+           <div id="ogrnValue" class="info-value"></div>
+         </div>
+         <div class="info-item">
+           <div class="info-label">Статус</div>
+           <div id="statusValue" class="info-value"></div>
+         </div>
+         <div class="info-item">
+           <div class="info-label">ОКПО</div>
+           <div id="okpoValue" class="info-value"></div>
+         </div>
+         <div class="info-item">
+           <div class="info-label">ОКВЭД</div>
+           <div id="okvedValue" class="info-value"></div>
+         </div>
+       </div>
+
+       <div class="address-block">
+         <div class="info-label">Адрес</div>
+         <div id="addressValue" class="info-value"></div>
+       </div>
+
+       <div class="management-block">
+         <div class="info-label">Руководитель</div>
+         <div id="managementFIOValue" class="info-value"></div>
+         <div id="managementPostValue" class="management-post"></div>
+       </div>
+     </div>
+   </div>
+
+   <!-- Секция с ссылками на реестры -->
+   <div id="registryLinksSection" class="registry-links-section">
+     <div class="header">Проверка в реестрах:</div>
+     <div class="registry-link-item">
+       <a href="#" id="classifiedLink" target="_blank" rel="noopener noreferrer">Реестр классифицированных объектов</a>
+       <span id="classifiedCheckIcon" class="check-status-icon">✓</span>
+     </div>
+     <div class="registry-link-item">
+       <a href="#" id="tourOperatorLink" target="_blank" rel="noopener noreferrer">Федеральный реестр Туроператоров</a>
+       <span id="tourOperatorCheckIcon" class="check-status-icon">✓</span>
+     </div>
+     <div class="registry-link-item">
+       <a href="https://tourism.gov.ru/agents/" id="agentRegistryLink" target="_blank" rel="noopener noreferrer">Федеральный реестр Турагентов и Субагентов</a>
+     </div>
+     <div id="agentLinkInputContainer" class="agent-link-input-container">
+       <input type="text" id="agentLinkInput" class="addon-input" placeholder="Вставьте ссылку на реестр турагентов" style="width: 100%;">
+     </div>
+   </div>
+
+   <!-- Секция с кнопкой копирования -->
+   <div id="copyResultSection" class="copy-result-section">
+     <button id="copyResultButton" class="addon-btn-secondary" style="width: 100%;">
+       Скопировать результат проверки
+     </button>
+     <div class="info-text">
+       Нажмите на кнопку и вставьте скопированный текст в описание к карточке!
+     </div>
+   </div>
+
+   <!-- Кнопки управления -->
+   <div class="buttons-group">
+     <button id="cancelButton" class="addon-btn">Закрыть</button>
+     <button id="checkButton" class="addon-btn-primary">Проверить</button>
+     <button id="completeCheckButton" class="addon-btn-primary" style="display: none;">
+       Проверка завершена
+     </button>
+   </div>
+ </div>
+ 
+ <script src="/public/js/check-inn.js"></script>
+</body>
+</html>
