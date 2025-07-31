@@ -1,0 +1,225 @@
+/* General styling for Kaiten Addons */
+body {
+    font-family: var(--addon-font-family);
+    color: var(--addon-text-primary-color);
+    background-color: var(--addon-background-level0);
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+/* Styles for the main index.html page (optional) */
+.main-page-content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-page-content h1 {
+    font-size: 2em;
+    color: var(--addon-primary-color);
+    margin-bottom: 15px;
+}
+
+.main-page-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--addon-text-secondary-color);
+}
+
+
+/* Styles for check-inn.html and check-result.html */
+.addon-container {
+    padding: 16px;
+}
+
+.loader {
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.loader-spinner {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--addon-background-level2);
+    border-radius: 50%;
+    border-top-color: var(--addon-primary-color);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loader-text {
+    margin-top: 8px;
+    color: var(--addon-text-secondary-color);
+    font-size: 13px;
+}
+
+.results-section {
+    display: none; /* Hidden by default */
+    margin-top: 20px;
+    border-top: 1px solid var(--addon-divider);
+    padding-top: 16px;
+}
+
+.company-info-block {
+    margin-bottom: 16px;
+    padding: 16px;
+    background: var(--addon-background-level1); /* Slightly darker background for the block */
+    border-radius: 8px;
+    border: 1px solid var(--addon-divider);
+}
+
+.company-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--addon-text-primary-color);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 16px;
+    background: var(--addon-background-level2); /* Even darker background for nested grid */
+    border-radius: 8px;
+}
+
+.info-item {
+    color: var(--addon-text-primary-color);
+}
+
+.info-label {
+    color: var(--addon-text-secondary-color);
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.info-value {
+    font-weight: 500;
+    word-wrap: break-word; /* Ensure long texts wrap */
+}
+
+.address-block, .management-block {
+    margin-top: 12px;
+    padding: 8px 16px; /* Padding for these blocks */
+    background: var(--addon-background-level1);
+    border-radius: 8px;
+    border: 1px solid var(--addon-divider);
+}
+
+.address-block .info-value, .management-block .info-value {
+    margin-top: 4px;
+    color: var(--addon-text-primary-color);
+}
+
+.management-post {
+    font-size: 12px;
+    color: var(--addon-text-secondary-color);
+    margin-top: 2px;
+}
+
+.registry-links-section {
+    display: none; /* Hidden by default */
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--addon-divider);
+}
+
+.registry-links-section .header {
+    font-size: 15px;
+    color: var(--addon-text-secondary-color);
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.registry-link-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.registry-link-item a {
+    color: var(--addon-primary-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.registry-link-item a:hover {
+    text-decoration: underline;
+}
+
+.check-status-icon {
+    display: none; /* Hidden by default, shown via JS */
+    color: var(--addon-success-color); /* Green checkmark */
+    font-size: 18px; /* Larger icon */
+    line-height: 1; /* Align with text */
+}
+
+.agent-link-input-container {
+    display: none;
+    margin-top: 8px;
+}
+
+.buttons-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.copy-result-section {
+    display: none; /* Hidden by default */
+    margin-top: 16px;
+    text-align: center;
+}
+
+.copy-result-section .info-text {
+    margin-top: 8px;
+    color: var(--addon-text-secondary-color);
+    font-size: 12px;
+}
+
+/* Specific styles for check-result.html */
+.check-result-container {
+    padding: 16px;
+}
+
+.check-date-info {
+    margin-bottom: 16px;
+    color: var(--addon-text-secondary-color);
+    font-size: 13px;
+}
+
+.registry-check-summary {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--addon-divider);
+}
+
+.registry-check-summary .header {
+    font-size: 14px;
+    color: var(--addon-text-secondary-color);
+    margin-bottom: 8px;
+}
+
+.registry-check-summary div {
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: var(--addon-text-primary-color);
+}
+
+.registry-check-summary a {
+    color: var(--addon-primary-color);
+    text-decoration: none;
+}
+.registry-check-summary a:hover {
+    text-decoration: underline;
+}
